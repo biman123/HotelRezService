@@ -28,17 +28,12 @@ spec:
     spec:
       containers:
         - name: hotel-rez-service
-          image:  biman/hotel-rez-service:latest
+          image:  717904358179.dkr.ecr.us-east-2.amazonaws.com/hotel-rez-service:latest
           imagePullPolicy: Always
           env:
           - name: BW_LOGLEVEL
             value: "ERROR"
           - name: BW_PROFILE
-            value: docker
-          - name: APP_NAME
-            valueFrom:
-              configMapKeyRef:
-                name: product-config2
-                key: APP_NAME
+            value: default
           ports:
             - containerPort: 8080
