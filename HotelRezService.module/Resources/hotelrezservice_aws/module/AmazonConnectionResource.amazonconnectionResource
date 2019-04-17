@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amazons3="http://ns.tibco.com/bw/sharedresource/amazons3" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_teLcsRuKEeedqeNWl8vbFw" name="hotelrezservice_aws.module.AmazonConnectionResource" type="amazons3:Amazons3ClientConfiguration">
+  <jndi:configuration xsi:type="amazons3:Amazons3ClientConfiguration" xmi:id="_teVNsBuKEeedqeNWl8vbFw">
+    <substitutionBindings xmi:id="_KlRusBuLEeedqeNWl8vbFw" template="accessKey" propName="/AWS_Details/AWS_KeyID"/>
+    <substitutionBindings xmi:id="_MhzFwBuLEeedqeNWl8vbFw" template="secretkey" propName="/AWS_Details/AWS_SecretKeyID"/>
+  </jndi:configuration>
+</jndi:namedResource>

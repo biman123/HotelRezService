@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sp="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/securityprovider" xmlns:subject="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/identity/subject" xmi:id="_-ZJxMXPzEeau0Kp0JiRtiA" name="hotelrezservice.module.IdentityProviderShop" type="subject:SubjectConfiguration">
+  <jndi:configuration xsi:type="sp:IdentitySecurityProvider" xmi:id="_-ZmdIHPzEeau0Kp0JiRtiA">
+    <configuration xsi:type="subject:SubjectConfiguration" xmi:id="_-ZmdIXPzEeau0Kp0JiRtiA" username="cts\592677" userpassword="#!CiO5CcI/3TGn9ra56dNiXmz9h+GFDTYe2YjlhUyodE7R7mQLjX4CsA=="/>
+  </jndi:configuration>
+</jndi:namedResource>

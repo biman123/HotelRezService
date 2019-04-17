@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:Q1="http://tns.tibco.com/bw/REST" xmlns:source="bw.rest" xmlns:tns="http://xmlns.example.com/RezImplementation/headerParameters" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://xmlns.example.com/RezImplementation/headerParameters">
+  <xs:import namespace="http://tns.tibco.com/bw/REST"/>
+  <xs:complexType name="ipmtib-tps-v1-hotel-rezGetHeaderType">
+    <xs:complexContent>
+      <xs:extension base="Q1:httpTransportHeaders">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" name="HotelGroupID" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="Username" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="Password" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ipmtib-tps-v1-hotel-rezGetHeader" type="tns:ipmtib-tps-v1-hotel-rezGetHeaderType"/>
+  <xs:complexType name="ipmtib-tps-v1-hotel-rezPutHeaderType">
+    <xs:complexContent>
+      <xs:extension base="Q1:httpTransportHeaders">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" name="HotelGroupID" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="Username" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="Password" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ipmtib-tps-v1-hotel-rezPutHeader" type="tns:ipmtib-tps-v1-hotel-rezPutHeaderType"/>
+  <xs:complexType name="ipmtib-tps-v1-hotel-rezPostHeaderType">
+    <xs:complexContent>
+      <xs:extension base="Q1:httpTransportHeaders">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" name="Username" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="HotelGroupID" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="Password" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ipmtib-tps-v1-hotel-rezPostHeader" type="tns:ipmtib-tps-v1-hotel-rezPostHeaderType"/>
+  <xs:complexType name="ipmtib-tps-v1-hotel-rezDeleteHeaderType">
+    <xs:complexContent>
+      <xs:extension base="Q1:httpTransportHeaders">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="0" name="Username" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="Password" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="HotelGroupID" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ipmtib-tps-v1-hotel-rezDeleteHeader" type="tns:ipmtib-tps-v1-hotel-rezDeleteHeaderType"/>
+</xs:schema>

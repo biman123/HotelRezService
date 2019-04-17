@@ -1,0 +1,539 @@
+{
+  "definitions": {
+    "HotelRoomCancellationResponse": {
+      "properties": {
+        "HotelRoomCancellationResponse": {
+          "properties": {
+            "CancellationID": {
+              "type": "string"
+            },
+            "ReservationID": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "HotelRoomReservation": {
+      "properties": {
+        "HotelRoomReservation": {
+          "properties": {
+            "AddressInfo": {
+              "properties": {
+                "address1": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "countryCode": {
+                  "type": "string"
+                },
+                "postalCode": {
+                  "type": "string"
+                },
+                "stateProvinceCode": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "ReservationInfo": {
+              "properties": {
+                "creditCardExpirationMonth": {
+                  "type": "string"
+                },
+                "creditCardExpirationYear": {
+                  "type": "string"
+                },
+                "creditCardIdentifier": {
+                  "type": "string"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "creditCardType": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "firstName": {
+                  "type": "string"
+                },
+                "homePhone": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "workPhone": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "RoomGroup": {
+              "properties": {
+                "Room": {
+                  "properties": {
+                    "bedTypeId": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "numberOfAdults": {
+                      "type": "string"
+                    },
+                    "smokingPreference": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "arrivalDate": {
+              "type": "string"
+            },
+            "channelId": {
+              "type": "string"
+            },
+            "chargeableRate": {
+              "type": "string"
+            },
+            "departureDate": {
+              "type": "string"
+            },
+            "hotelId": {
+              "type": "string"
+            },
+            "rateCode": {
+              "type": "string"
+            },
+            "roomTypeCode": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "HotelRoomReservationResponse": {
+      "properties": {
+        "HotelRoomReservationResponse": {
+          "properties": {
+            "ReservationID": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "HotelModifyRoomReservation": {
+      "properties": {
+        "HotelModifyRoomReservation": {
+          "properties": {
+            "arrivalDate": {
+              "type": "string"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "departureDate": {
+              "type": "string"
+            },
+            "numberOfAdults": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "info": {
+    "title": "HotelRezServiceUpdated",
+    "version": "1.0.0",
+    "x-lastModified": "Sep 19, 2016 06:47AM PST"
+  },
+  "paths": {
+    "/ipmtib-tps/v1/hotel/rez/": {
+      "get": {
+        "parameters": [
+          {
+            "name": "RezID",
+            "in": "query",
+            "description": "Reservation ID",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "EmailID",
+            "in": "query",
+            "description": "EmailID used during booking",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "PhoneNo",
+            "in": "query",
+            "description": "Phone no",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "HotelGroupID",
+            "in": "header",
+            "description": "HotelGroupID for which Booking is made",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "HotelGroupID"
+          },
+          {
+            "name": "Username",
+            "in": "header",
+            "description": "Username for Authentication",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "Username"
+          },
+          {
+            "name": "Password",
+            "in": "header",
+            "description": "Password",
+            "required": true,
+            "type": "string",
+            "format": "password",
+            "default": "Password"
+          },
+          {
+            "name": "ChannelId",
+            "in": "header",
+            "description": "ChannelId",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "ChannelId"
+          },
+          {
+            "name": "PartnerId",
+            "in": "header",
+            "description": "PartnerId",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "PartnerId"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/HotelRoomReservation"
+            }
+          },
+          "401": {
+            "description": "Invalid credential",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "Invalid search parameter",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Username",
+            "in": "header",
+            "description": "Username for authentication",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "Username"
+          },
+          {
+            "name": "HotelGroupID",
+            "in": "header",
+            "description": "HotelGroupID to identify Hotel Chain",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "HotelGroupID"
+          },
+          {
+            "name": "Password",
+            "in": "header",
+            "description": "password for authentication",
+            "required": true,
+            "type": "string",
+            "format": "password",
+            "default": "Password"
+          },
+          {
+            "name": "PartnerId",
+            "in": "header",
+            "description": "Unique ID for a partner",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "PartnerId"
+          },
+          {
+            "name": "ChannelId",
+            "in": "header",
+            "description": "Unique ID for a channel",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "ChannelId"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/HotelRoomReservation"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "Reservation Successfully Created",
+            "schema": {
+              "$ref": "#/definitions/HotelRoomReservationResponse"
+            }
+          },
+          "400": {
+            "description": "Invalid Reservation Request",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Invalid credential",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "RezID",
+            "in": "query",
+            "description": "RezID to modify",
+            "required": false,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "HotelGroupID",
+            "in": "header",
+            "description": "HotelGroupID for which reservation made",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "HotelGroupID"
+          },
+          {
+            "name": "Username",
+            "in": "header",
+            "description": "Username for authentication",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "Username"
+          },
+          {
+            "name": "Password",
+            "in": "header",
+            "description": "Password",
+            "required": true,
+            "type": "string",
+            "format": "password",
+            "default": "Password"
+          },
+          {
+            "name": "ChannelId",
+            "in": "header",
+            "description": "Unique ID for a channel",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "ChannelId"
+          },
+          {
+            "name": "PartnerId",
+            "in": "header",
+            "description": "Unique ID for a partner",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "PartnerId"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/HotelModifyRoomReservation"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "Invalid Modify request",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Invalid credential",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "Reservation not found",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "delete": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/HotelRoomCancellationResponse"
+            }
+          },
+          "401": {
+            "description": "Invalid Credential",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "Reservation not found",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "RezID",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "000"
+          },
+          {
+            "name": "Username",
+            "in": "header",
+            "description": "Username",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "Username"
+          },
+          {
+            "name": "Password",
+            "in": "header",
+            "description": "Password",
+            "required": true,
+            "type": "string",
+            "format": "password",
+            "default": "Password"
+          },
+          {
+            "name": "HotelGroupID",
+            "in": "header",
+            "description": "HotelGroupID",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "HotelGroupID"
+          },
+          {
+            "name": "PartnerId",
+            "in": "header",
+            "description": "PartnerId",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "PartnerId"
+          },
+          {
+            "name": "ChannelId",
+            "in": "header",
+            "description": "ChannelId",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "default": "ChannelId"
+          }
+        ]
+      }
+    }
+  },
+  "swagger": "2.0"
+}

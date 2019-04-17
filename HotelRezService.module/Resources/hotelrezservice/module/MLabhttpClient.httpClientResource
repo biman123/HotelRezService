@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:sslclient="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslclient" xmi:id="_q6xbIV7lEeaQV-rgKh-FrA" name="hotelrezservice.module.MLabhttpClient" type="http:HttpClientConfiguration">
+  <identitySet xmi:id="_tj3u4F7mEeaQV-rgKh-FrA" appliesTo="namedResource" name="HttpClientIdentitySet" provides="confidentiality">
+    <sca_ext:intentMap xmi:id="_tj3u4V7mEeaQV-rgKh-FrA" provides="sca_ext:confidentiality">
+      <sca_ext:qualifier xmi:id="_tj3u4l7mEeaQV-rgKh-FrA" name="transport">
+        <id:IdentityReference xmi:id="_tj3u417mEeaQV-rgKh-FrA" URI="hotelrezservice.module.MLabsslClient" type="sslclient:SSLClientConfiguration"/>
+      </sca_ext:qualifier>
+    </sca_ext:intentMap>
+  </identitySet>
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_q6xbIl7lEeaQV-rgKh-FrA" httpClientVersion="httpcomponents" retryCount="3" enableHystrix="true" cmdExecutionIsolationStrategy="THREAD" cmdExecutionIsolationTimeout="1000" cmdExecutionTimeoutEnabled="true" cmdExecutionIsolationInterruptOnTimeout="true" cmdCircuitBreakerRequestVolumeThreshold="6" cmdCircuitBreakerSleepWindow="10000" cmdCircuitBreakerErrorThresholdPercentage="50" cmdMetricsRollingStatsTime="30000" cmdMetricsRollingStatsNumBuckets="10" cmdRequestLogEnabled="true" tpCoreSize="10" tpMaxQueueSize="-1" tpQueueSizeRejectionThreshold="5" tpKeepAliveTime="2">
+    <substitutionBindings xmi:id="_CgB-oOkyEeauCZCyK_4KXQ" template="maxTotalConnections" propName="/MLab/MAX_TOT_CONN"/>
+    <substitutionBindings xmi:id="_E2yaoOkyEeauCZCyK_4KXQ" template="maxTotalConnectionsPerHost" propName="/MLab/MAX_TOT_CONN_PER_HOST_ROUTE"/>
+    <substitutionBindings xmi:id="_iOAMQOkyEeauCZCyK_4KXQ" template="idleConnectionTimeout" propName="/MLab/CONN_TIMEOUT"/>
+    <substitutionBindings xmi:id="_B6fakO9yEeazpYXYrbEW8w" template="hystrixCommandName" propName="COMMAND_NAME"/>
+    <tcpDetails xmi:id="_q6xbI17lEeaQV-rgKh-FrA" port="443">
+      <substitutionBindings xmi:id="__AynwOhZEeaFIO3a2EowGg" template="host" propName="/MLab/HTTP_CLIENT_HOST"/>
+    </tcpDetails>
+  </jndi:configuration>
+</jndi:namedResource>

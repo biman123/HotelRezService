@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:JsonSchema="/T1472205577064Converted/JsonSchema" xmlns:JsonSchema_1="/T1472624308360Converted/JsonSchema" xmlns:JsonSchema_2="/T1472707676907Converted/JsonSchema" xmlns:JsonSchema_3="/T1473152890111Converted/JsonSchema" xmlns:JsonSchema_4="/T1473153298357Converted/JsonSchema" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_ZpSu0GtzEeavduGtuQ2uWA" targetNamespace="http://tns.tibco.com/bw/composite/HotelRezService.module" name="HotelRezService.module" compositeext:version="1.0.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_Y0pc8nQSEeaZOp1ZxplSfw" name="ipmtib-tps-v1-hotel-rez" promote="ComponentRezImplementation/ipmtib-tps-v1-hotel-rez">
+    <sca:interface.wsdl xmi:id="_Y0pc9nQSEeaZOp1ZxplSfw" interface="http://xmlns.example.com/20160906144450PLT#wsdl.interface(ipmtib-tps-v1-hotel-rez)" scaext:wsdlLocation="../Processes/hotelrezservice/module/RezImplementation.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_Y0pc93QSEeaZOp1ZxplSfw" name="RestService" path="/ipmtib-tps/v1/hotel/rez/" docBasePath="http://localhost:7777/HotelRezService.module" docResourcePath="Ipmtib-tps" basePath="/" connector="hotelrezservice.module.Rezlmplementation" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/HotelRezServiceUpdated_1.0.0.json">
+      <operation xmi:id="_Y0pc-HQSEeaZOp1ZxplSfw" operationName="post" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <parameters xmi:id="_Y0ym7HQSEeaZOp1ZxplSfw">
+          <parameterMapping xmi:id="_Y0ym7XQSEeaZOp1ZxplSfw" parameterName="Username" parameterType="Header" dataType="string" required="true" description="Username for authentication"/>
+          <parameterMapping xmi:id="_Y0ym7nQSEeaZOp1ZxplSfw" parameterName="HotelGroupID" parameterType="Header" dataType="string" required="true" description="HotelGroupID to identify Hotel Chain"/>
+          <parameterMapping xmi:id="_Y0ym73QSEeaZOp1ZxplSfw" parameterName="Password" parameterType="Header" dataType="string#password" required="true" description="password for authentication"/>
+        </parameters>
+        <responseStatus xmi:id="_Y0ym4HQSEeaZOp1ZxplSfw" statusCode="201" reasonPhrase="Reservation Successfully Created" elementQName="JsonSchema_4:HotelRoomReservationResponse"/>
+        <responseStatus xmi:id="_Y0ym4nQSEeaZOp1ZxplSfw" statusCode="400" reasonPhrase="Invalid Reservation Request" dataType="string"/>
+        <responseStatus xmi:id="_Y0ym43QSEeaZOp1ZxplSfw" statusCode="401" reasonPhrase="Invalid credential" dataType="string"/>
+        <clientFormat>JSON</clientFormat>
+        <clientRequestFormat>JSON</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_Y0pc-XQSEeaZOp1ZxplSfw" operationName="get" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_Y0ym8HQSEeaZOp1ZxplSfw">
+          <parameterMapping xmi:id="_Y0ym8XQSEeaZOp1ZxplSfw" parameterName="RezID" parameterType="Query" dataType="string" description="Reservation ID"/>
+          <parameterMapping xmi:id="_Y0ym8nQSEeaZOp1ZxplSfw" parameterName="EmailID" parameterType="Query" dataType="string" description="EmailID used during booking"/>
+          <parameterMapping xmi:id="_Y0ym83QSEeaZOp1ZxplSfw" parameterName="PhoneNo" parameterType="Query" dataType="string" description="Phone no"/>
+          <parameterMapping xmi:id="_Y0ym9HQSEeaZOp1ZxplSfw" parameterName="HotelGroupID" parameterType="Header" dataType="string" required="true" description="HotelGroupID for which Booking is made"/>
+          <parameterMapping xmi:id="_Y0ym9XQSEeaZOp1ZxplSfw" parameterName="Username" parameterType="Header" dataType="string" required="true" description="Username for Authentication"/>
+          <parameterMapping xmi:id="_Y0ym9nQSEeaZOp1ZxplSfw" parameterName="Password" parameterType="Header" dataType="string#password" required="true" description="Password"/>
+        </parameters>
+        <responseStatus xmi:id="_Y0ym5HQSEeaZOp1ZxplSfw" statusCode="401" reasonPhrase="Invalid credential" dataType="string"/>
+        <responseStatus xmi:id="_Y0ym5XQSEeaZOp1ZxplSfw" statusCode="404" reasonPhrase="Invalid search parameter" dataType="string"/>
+        <clientFormat>JSON</clientFormat>
+      </operation>
+      <operation xmi:id="_Y0pc-nQSEeaZOp1ZxplSfw" operationName="put" httpMethod="PUT" responseStyle="element" requestStyle="element">
+        <parameters xmi:id="_Y0ym93QSEeaZOp1ZxplSfw">
+          <parameterMapping xmi:id="_Y0ym-HQSEeaZOp1ZxplSfw" parameterName="RezID" parameterType="Query" dataType="string" description="RezID to modify"/>
+          <parameterMapping xmi:id="_Y0ym-XQSEeaZOp1ZxplSfw" parameterName="HotelGroupID" parameterType="Header" dataType="string" required="true" description="HotelGroupID for which reservation made"/>
+          <parameterMapping xmi:id="_Y0ym-nQSEeaZOp1ZxplSfw" parameterName="Username" parameterType="Header" dataType="string" required="true" description="Username for authentication"/>
+          <parameterMapping xmi:id="_Y0ym-3QSEeaZOp1ZxplSfw" parameterName="Password" parameterType="Header" dataType="string#password" required="true" description="Password"/>
+        </parameters>
+        <responseStatus xmi:id="_Y0ym5nQSEeaZOp1ZxplSfw" statusCode="400" reasonPhrase="Invalid Modify request" dataType="string"/>
+        <responseStatus xmi:id="_Y0ym53QSEeaZOp1ZxplSfw" statusCode="401" reasonPhrase="Invalid credential" dataType="string"/>
+        <responseStatus xmi:id="_Y0ym6HQSEeaZOp1ZxplSfw" statusCode="404" reasonPhrase="Reservation not found" dataType="string"/>
+        <clientFormat>JSON</clientFormat>
+        <clientRequestFormat>JSON</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_Y0pc-3QSEeaZOp1ZxplSfw" operationName="delete" httpMethod="DELETE" responseStyle="element">
+        <parameters xmi:id="_Y0ym_HQSEeaZOp1ZxplSfw">
+          <parameterMapping xmi:id="_Y0ym_XQSEeaZOp1ZxplSfw" parameterName="RezID" parameterType="Query" dataType="string" required="true" description=""/>
+          <parameterMapping xmi:id="_Y0ym_nQSEeaZOp1ZxplSfw" parameterName="Username" parameterType="Header" dataType="string" description=""/>
+          <parameterMapping xmi:id="_Y0ym_3QSEeaZOp1ZxplSfw" parameterName="Password" parameterType="Header" dataType="string" description=""/>
+          <parameterMapping xmi:id="_Y0ynAHQSEeaZOp1ZxplSfw" parameterName="HotelGroupID" parameterType="Header" dataType="string" description=""/>
+        </parameters>
+        <responseStatus xmi:id="_Y0ym6XQSEeaZOp1ZxplSfw" statusCode="401" reasonPhrase="Invalid Credential" dataType="string"/>
+        <responseStatus xmi:id="_Y0ym6nQSEeaZOp1ZxplSfw" statusCode="404" reasonPhrase="Reservation not found" dataType="string"/>
+        <clientFormat>JSON</clientFormat>
+      </operation>
+      <parameters xmi:id="_Y0ym63QSEeaZOp1ZxplSfw"/>
+      <import xmi:id="_Y0ym4XQSEeaZOp1ZxplSfw" importType="http://www.w3.org/2001/XMLSchema" namespace="/T1473153298357Converted/JsonSchema"/>
+      <advancedConfig xmi:id="_gktekTpGEemEFZEFSLTcmQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_Y0pc_HQSEeaZOp1ZxplSfw" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_en4vwGtzEeavduGtuQ2uWA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_eofMsGtzEeavduGtuQ2uWA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_eoksQGtzEeavduGtuQ2uWA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_eoqy4GtzEeavduGtuQ2uWA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_eowScGtzEeavduGtuQ2uWA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_eoz80GtzEeavduGtuQ2uWA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_9oUVUN8LEea1L8zy28R7lw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_46uqQO9xEeazpYXYrbEW8w" name="COMMAND_NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_uAXxoHjlEea6kJsRCcyb-Q" name="SNOW/KEYSTORE_URL" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uAXxoXjlEea6kJsRCcyb-Q" name="SNOW/KEYSTORE_PASSWORD" type="property:password" scalable="true"/>
+  <sca:property xmi:id="_uAXxonjlEea6kJsRCcyb-Q" name="SNOW/HTTP_CLIENT_PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_uAXxo3jlEea6kJsRCcyb-Q" name="SNOW/HTTP_CLIENT_HOST" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uAXxpHjlEea6kJsRCcyb-Q" name="SNOW/ServiceNow_problem/ENDPOINT_URI" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uAXxpXjlEea6kJsRCcyb-Q" name="SNOW/ServiceNow_problem/USERNAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uAXxpnjlEea6kJsRCcyb-Q" name="SNOW/ServiceNow_problem/PASSWORD" type="property:password" scalable="true"/>
+  <sca:property xmi:id="_s9qZgOhZEeaFIO3a2EowGg" name="/MLab/HTTP_CLIENT_HOST" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_s7AW8OkxEeauCZCyK_4KXQ" name="/MLab/MAX_TOT_CONN" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_3ol7AOkxEeauCZCyK_4KXQ" name="/MLab/MAX_TOT_CONN_PER_HOST_ROUTE" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_SUR6gOkyEeauCZCyK_4KXQ" name="/MLab/CONN_TIMEOUT" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_oOJw0OkyEeauCZCyK_4KXQ" name="/MLab/KEYSTORE_URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_pxY4oOlHEeauCZCyK_4KXQ" name="/MLab/SERVICE_NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_cnmagFncEemEtYSPrQwtNw" name="/MLab/apiKey" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_2jL48E9JEeeGtq13tfh7Rg" name="/AWS_Details/AWS_RegionName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_K891gE9KEeeGtq13tfh7Rg" name="/AWS_Details/AWS_KeyID" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LDqTYE9KEeeGtq13tfh7Rg" name="/AWS_Details/AWS_SecretKeyID" type="property:password" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LL_I8E9KEeeGtq13tfh7Rg" name="/AWS_Details/RezQueue" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_XXZb0HQSEeaZOp1ZxplSfw" name="ComponentRezImplementation" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_XXZb0XQSEeaZOp1ZxplSfw" processName="hotelrezservice.module.RezImplementation"/>
+    <sca:service xmi:id="_Y0pc8HQSEeaZOp1ZxplSfw" name="ipmtib-tps-v1-hotel-rez">
+      <sca:interface.wsdl xmi:id="_Y0pc8XQSEeaZOp1ZxplSfw" interface="http://xmlns.example.com/20160906144450PLT#wsdl.interface(ipmtib-tps-v1-hotel-rez)" scaext:wsdlLocation="../Processes/hotelrezservice/module/RezImplementation.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_u-46QHjjEea6kJsRCcyb-Q" name="ComponentInvokeServiceNowAPI" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_u-46QXjjEea6kJsRCcyb-Q" processName="hotelrezservice.module.InvokeServiceNowAPI"/>
+  </sca:component>
+</sca:composite>

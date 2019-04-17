@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:source="bw.rest" xmlns:tns="http://xmlns.example.com/RezImplementation/parameters" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://xmlns.example.com/RezImplementation/parameters">
+  <xs:element name="ipmtib-tps-v1-hotel-rezGetParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="RezID" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="EmailID" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="PhoneNo" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ipmtib-tps-v1-hotel-rezPutParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="RezID" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ipmtib-tps-v1-hotel-rezDeleteParameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" name="RezID" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

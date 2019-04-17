@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="HotelRezOutputDetails" tibex:source="bw.xml.render">
+    <xsd:complexType>
+      <xsd:sequence>
+      	<xsd:element name="GuestFirstName" type="xsd:string"></xsd:element>
+      	<xsd:element name="GuestLastName" type="xsd:string"></xsd:element>
+      	<xsd:element name="ReservationID" type="xsd:string"></xsd:element>
+      	<xsd:element name="HotelID" type="xsd:string"></xsd:element>
+      	<xsd:element name="CheckInDate" type="xsd:string"></xsd:element>
+      	<xsd:element name="CheckOutDate" type="xsd:string"></xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

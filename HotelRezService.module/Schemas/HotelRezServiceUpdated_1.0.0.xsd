@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="/T1473153298357Converted/JsonSchema" xmlns:tns="/T1473153298357Converted/JsonSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="HotelModifyRoomReservation" type="tns:HotelModifyRoomReservation"/>
+    <xs:complexType name="HotelModifyRoomReservation">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="HotelModifyRoomReservation">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+                        <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+                        <xs:element minOccurs="0" name="numberOfAdults" type="xs:string"/>
+                        <xs:element minOccurs="0" name="departureDate" type="xs:string"/>
+                        <xs:element minOccurs="0" name="arrivalDate" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="HotelRoomReservation" type="tns:HotelRoomReservation"/>
+    <xs:complexType name="HotelRoomReservation">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="HotelRoomReservation">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="roomTypeCode" type="xs:string"/>
+                        <xs:element minOccurs="0" name="ReservationInfo">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="creditCardExpirationMonth" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="creditCardExpirationYear" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="creditCardNumber" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="homePhone" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="creditCardIdentifier" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="workPhone" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="creditCardType" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="email" type="xs:string"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="chargeableRate" type="xs:string"/>
+                        <xs:element minOccurs="0" name="RoomGroup">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element minOccurs="0" name="Room">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="smokingPreference" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="numberOfAdults" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="bedTypeId" type="xs:string"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="departureDate" type="xs:string"/>
+                        <xs:element minOccurs="0" name="hotelId" type="xs:string"/>
+                        <xs:element minOccurs="0" name="channelId" type="xs:string"/>
+                        <xs:element minOccurs="0" name="rateCode" type="xs:string"/>
+                        <xs:element minOccurs="0" name="AddressInfo">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element minOccurs="0" name="city" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="address1" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="countryCode" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="postalCode" type="xs:string"/>
+                                    <xs:element minOccurs="0" name="stateProvinceCode" type="xs:string"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="arrivalDate" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="HotelRoomReservationResponse" type="tns:HotelRoomReservationResponse"/>
+    <xs:complexType name="HotelRoomReservationResponse">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="HotelRoomReservationResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="ReservationID" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="HotelRoomCancellationResponse" type="tns:HotelRoomCancellationResponse"/>
+    <xs:complexType name="HotelRoomCancellationResponse">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="HotelRoomCancellationResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="ReservationID" type="xs:string"/>
+                        <xs:element minOccurs="0" name="CancellationID" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Hotwire" type="tns:Hotwire"/>
+    <xs:complexType name="Hotwire">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Hotwire">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Result">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element maxOccurs="unbounded" minOccurs="0" name="HotelDeal">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element minOccurs="0" name="NeighborhoodLongitude" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="SavingsPercentage" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="StateCode" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="City" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="StarRating" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="EndDate" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="Url" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="Neighborhood" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="NightDuration" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="CurrencyCode" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="StartDate" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="NeighborhoodLatitude" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="Price" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="NeighborhoodId" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="Headline" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="FoundDate" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="IsWeekendStay" type="xs:string"/>
+                                                <xs:element minOccurs="0" name="CountryCode" type="xs:string"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

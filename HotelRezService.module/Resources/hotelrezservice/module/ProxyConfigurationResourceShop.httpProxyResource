@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpproxy="http://xsd.tns.tibco.com/bw/models/sharedresource/httpproxy" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:subject="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/identity/subject" xmi:id="_1ist4XPzEeau0Kp0JiRtiA" name="hotelrezservice.module.ProxyConfigurationResourceShop" type="httpproxy:ProxyConfiguration">
+  <identitySet xmi:id="_-bO00HPzEeau0Kp0JiRtiA" appliesTo="namedResource" name="HttpClientIdentitySet" provides="confidentiality">
+    <sca_ext:intentMap xmi:id="_-bO00XPzEeau0Kp0JiRtiA" provides="sca_ext:confidentiality">
+      <sca_ext:qualifier xmi:id="_-bO00nPzEeau0Kp0JiRtiA" name="transport">
+        <id:IdentityReference xmi:id="_-bO003PzEeau0Kp0JiRtiA" URI="hotelrezservice.module.IdentityProviderShop" type="subject:SubjectConfiguration"/>
+      </sca_ext:qualifier>
+    </sca_ext:intentMap>
+  </identitySet>
+  <jndi:configuration xsi:type="httpproxy:HttpProxyConfiguration" xmi:id="_1i_o0HPzEeau0Kp0JiRtiA" proxyHost="proxy.cognizant.com" proxyPort="6050">
+    <proxyAuthentication xmi:id="_2XEKEHPzEeau0Kp0JiRtiA"/>
+  </jndi:configuration>
+</jndi:namedResource>

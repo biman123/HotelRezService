@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sqsclient="http://ns.tibco.com/tci/sharedresource/sqsclient" xmi:id="_g-MtcSQbEee9necj-dcZ5Q" name="hotelrezservice_aws.module.SQSClient_OfflineBooking" type="sqsclient:SQSClientConfiguration">
+  <jndi:configuration xsi:type="sqsclient:SqsClient" xmi:id="_g-MtciQbEee9necj-dcZ5Q" KeySecret="8RFU665kDHNI/+3wsBjFKAn/OyihYDSIAYnbYbD/">
+    <substitutionBindings xmi:id="_jqO14CQbEee9necj-dcZ5Q" template="Region" propName="/AWS_Details/AWS_RegionName"/>
+    <substitutionBindings xmi:id="_kmqB4CQbEee9necj-dcZ5Q" template="KeyId" propName="/AWS_Details/AWS_KeyID"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:tns="http://www.example.com/namespaces/tns/1473139026797" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.example.com/namespaces/tns/1473139026797">
+  <xsd:element name="ShopDetails">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="1" minOccurs="0" name="dest" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="distance" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="startdate" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="enddate" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="duration" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="limit" type="xsd:string"/>
+            </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

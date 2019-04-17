@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:_917b8056-7851-4865-ac2b-94e2aead39af="http://ns.tibco.com/bw/palette/dataformat/917b8056-7851-4865-ac2b-94e2aead39af" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_to6u0U9YEeeJ7PgDNOWjvQ" name="hotelrezservice_aws.module.DataFormatResource" type="dataformat:DataFormat">
+  <imports xmi:id="_T0XlIE94EeeHy_5cAcSY3A" importType="http://www.w3.org/2001/XMLSchema" namespace="http://ns.tibco.com/bw/palette/dataformat/917b8056-7851-4865-ac2b-94e2aead39af"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_to6u0k9YEeeJ7PgDNOWjvQ" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="_917b8056-7851-4865-ac2b-94e2aead39af:HotelRezDetails" fieldOffsetsStr="FirstName(0,0)&#xA;LastName(0,0)&#xA;TelephoneNumber(0,0)&#xA;Email(0,0)&#xA;AddressLine(0,0)&#xA;HotelID(0,0)&#xA;RatePlanCode(0,0)&#xA;RoomTypeCode(0,0)&#xA;CheckInDate(0,0)&#xA;CheckOutDate(0,0)&#xA;AdultCount(0,0)&#xA;ChildCount(0,0)&#xA;NumberOfRooms(0,0)&#xA;ChargeableRate(0,0)&#xA;ReservationID(0,0)">
+    <fieldOffsets xmi:id="_JnriYFZBEeeQCuZdvTnlIg" name="FirstName"/>
+    <fieldOffsets xmi:id="_T09bAU94EeeHy_5cAcSY3A" name="LastName"/>
+    <fieldOffsets xmi:id="_T09bAk94EeeHy_5cAcSY3A" name="TelephoneNumber"/>
+    <fieldOffsets xmi:id="_T09bA094EeeHy_5cAcSY3A" name="Email"/>
+    <fieldOffsets xmi:id="_T09bBE94EeeHy_5cAcSY3A" name="AddressLine"/>
+    <fieldOffsets xmi:id="_T09bDk94EeeHy_5cAcSY3A" name="HotelID"/>
+    <fieldOffsets xmi:id="_T09bD094EeeHy_5cAcSY3A" name="RatePlanCode"/>
+    <fieldOffsets xmi:id="_T09bEE94EeeHy_5cAcSY3A" name="RoomTypeCode"/>
+    <fieldOffsets xmi:id="_T09bEU94EeeHy_5cAcSY3A" name="CheckInDate"/>
+    <fieldOffsets xmi:id="_T09bEk94EeeHy_5cAcSY3A" name="CheckOutDate"/>
+    <fieldOffsets xmi:id="_T09bE094EeeHy_5cAcSY3A" name="AdultCount"/>
+    <fieldOffsets xmi:id="_T09bFE94EeeHy_5cAcSY3A" name="ChildCount"/>
+    <fieldOffsets xmi:id="_T09bFU94EeeHy_5cAcSY3A" name="NumberOfRooms"/>
+    <fieldOffsets xmi:id="_1-EoQFZxEeeVG6aRR4nnHA" name="ChargeableRate"/>
+    <fieldOffsets xmi:id="_xQAWoFZxEeeVG6aRR4nnHA" name="ReservationID"/>
+  </jndi:configuration>
+</jndi:namedResource>

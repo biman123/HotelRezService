@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:httpproxy="http://xsd.tns.tibco.com/bw/models/sharedresource/httpproxy" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:oasis-200401-wss-wssecurity-utility-1.0.xsd="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sslclient="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslclient" xmlns:subject="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/identity/subject" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmi:id="_gsyQoNvKEeaGa7-CP9dXlA" name="hotelrezservice.module.snow.servicenow_problem.HttpClientResource" type="http:HttpClientConfiguration" policySets="HttpClientResourcePolicySet" identitySets="HttpClientResource">
+  <policySet xmi:id="_gsyQpdvKEeaGa7-CP9dXlA" appliesTo="namedresource" name="HttpClientResourcePolicySet" provides="confidentiality">
+    <sca:intentMap xmi:id="_gsyQptvKEeaGa7-CP9dXlA" provides="sca:confidentiality">
+      <sca:qualifier xmi:id="_gsyQp9vKEeaGa7-CP9dXlA" name="transport">
+        <wsp:Policy xmi:id="_gsyQqNvKEeaGa7-CP9dXlA" oasis-200401-wss-wssecurity-utility-1.0.xsd:Id="HttpClientResource">
+          <sp:TransportBinding xmi:id="_gsyQqdvKEeaGa7-CP9dXlA">
+            <wsp:Policy xmi:id="_gsyQqtvKEeaGa7-CP9dXlA">
+              <sp:TransportToken xmi:id="_gsyQq9vKEeaGa7-CP9dXlA">
+                <wsp:Policy xmi:id="_gsyQrNvKEeaGa7-CP9dXlA">
+                  <sp:HttpsToken xmi:id="_gsyQrdvKEeaGa7-CP9dXlA">
+                    <wsp:Policy xmi:id="_gsyQrtvKEeaGa7-CP9dXlA">
+                      <sp:HttpBasicAuthentication xmi:id="_gsyQr9vKEeaGa7-CP9dXlA"/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:Policy>
+      </sca:qualifier>
+    </sca:intentMap>
+  </policySet>
+  <identitySet xmi:id="_gsyQsNvKEeaGa7-CP9dXlA" appliesTo="/HotelRezService.module/Resources/hotelrezservice/module/snow/servicenow_problem/HttpClientResource.httpClientResource" name="HttpClientResource" provides="confidentiality">
+    <sca_ext:intentMap xmi:id="_gsyQsdvKEeaGa7-CP9dXlA" provides="sca_ext:confidentiality">
+      <sca_ext:qualifier xmi:id="_gsyQstvKEeaGa7-CP9dXlA" name="transport">
+        <id:IdentityReference xmi:id="_gsyQs9vKEeaGa7-CP9dXlA" URI="hotelrezservice.module.snow.SSLClientResource" type="sslclient:SSLClientConfiguration"/>
+        <id:IdentityReference xmi:id="_gsyQtNvKEeaGa7-CP9dXlA" URI="hotelrezservice.module.snow.servicenow_problem.IdentityProvider" type="subject:SubjectConfiguration"/>
+      </sca_ext:qualifier>
+    </sca_ext:intentMap>
+  </identitySet>
+  <jndi:reference xmi:id="_zBAwwPHVEeaK-_6g1upLdQ" key="proxyConfigurationName" type="httpproxy:ProxyConfiguration" value="hotelrezservice.module.ProxyConfigurationResourceShop"/>
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_gsyQodvKEeaGa7-CP9dXlA" httpClientVersion="commons">
+    <tcpDetails xmi:id="_gsyQotvKEeaGa7-CP9dXlA">
+      <substitutionBindings xmi:id="_gsyQo9vKEeaGa7-CP9dXlA" template="host" propName="SNOW/HTTP_CLIENT_HOST"/>
+      <substitutionBindings xmi:id="_gsyQpNvKEeaGa7-CP9dXlA" template="port" propName="SNOW/HTTP_CLIENT_PORT"/>
+    </tcpDetails>
+  </jndi:configuration>
+</jndi:namedResource>

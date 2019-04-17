@@ -1,0 +1,27 @@
+Manifest-Version: 1.0.0.201904171527
+Bundle-SymbolicName: HotelRezService.module
+Bundle-ManifestVersion: 2
+TIBCO-BW-Edition: bwcf
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tib
+ co.bw.palette; filter:="(name=bw.generalactivities)",com.tibco.bw.pal
+ ette; filter:="(name=bw.restjson)",com.tibco.bw.palette; filter:="(na
+ me=bw.http)",com.tibco.bw.sharedresource.model; filter:="(name=bw.dat
+ aformat)",com.tibco.bw.sharedresource.model; filter:="(name=bw.httpcl
+ ient)",com.tibco.bw.sharedresource.model; filter:="(name=bw.httpconne
+ ctor)",com.tibco.bw.sharedresource.model; filter:="(name=bw.httpproxy
+ )",com.tibco.bw.sharedresource.model; filter:="(name=bw.cred)",com.ti
+ bco.bw.sharedresource.model; filter:="(name=bw.sslclient)",com.tibco.
+ bw.sharedresource.model; filter:="(name=bw.userid)",com.tibco.bw.bind
+ ing.model; filter:="(name=bw.rest)",com.tibco.bw.binding.model; filte
+ r:="(name=bw.soap)"
+TIBCO-BWCE-Edition-Target: cf
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-Version: 1.0.1 V23 2016-08-10
+Bundle-Name: HotelRezService Module
+Bundle-Version: 1.0.0.201904171527
+Bundle-ClassPath: .
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+

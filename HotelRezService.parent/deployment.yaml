@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hotel-rez-service
+  labels:
+    app: hotel-rez-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app: hotel-rez-service
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: hotel-rez-service
+spec:
+  replicas: 1
+  selector:
+    app: hotel-rez-service
+  template:
+    metadata:
+      name: hotel-rez-service
+      labels:
+        app: hotel-rez-service
+    spec:
+      containers:
+        - name: hotel-rez-service
+          image:  biman/hotel-rez-service:latest
+          imagePullPolicy: Always
+          env:
+          - name: BW_LOGLEVEL
+            value: "ERROR"
+          - name: BW_PROFILE
+            value: docker
+          - name: APP_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: product-config2
+                key: APP_NAME
+          ports:
+            - containerPort: 8080

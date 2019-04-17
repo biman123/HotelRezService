@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat/917b8056-7851-4865-ac2b-94e2aead39af" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns.tibco.com/bw/palette/dataformat/917b8056-7851-4865-ac2b-94e2aead39af">
+  <xsd:element name="HotelRezDetails" tibex:source="sr.index.dataFormatResource">
+    <xsd:complexType>
+      <xsd:sequence>
+                <xsd:element name="FirstName" type="xsd:string"/>
+                <xsd:element name="LastName" type="xsd:string"/>
+                <xsd:element name="TelephoneNumber" type="xsd:string"/>
+                <xsd:element name="Email" type="xsd:string"/>
+                <xsd:element name="AddressLine" type="xsd:string"/>
+                <xsd:element name="HotelID" type="xsd:string"/>
+                <xsd:element name="RatePlanCode" type="xsd:string"/>
+                <xsd:element name="RoomTypeCode" type="xsd:string"/>
+                <xsd:element name="CheckInDate" type="xsd:string"/>
+                <xsd:element name="CheckOutDate" type="xsd:string"/>
+                <xsd:element name="AdultCount" type="xsd:string"/>
+                <xsd:element name="ChildCount" type="xsd:string"/>
+                <xsd:element name="NumberOfRooms" type="xsd:string"/>
+                <xsd:element name="ChargeableRate" type="xsd:string"/>
+                <xsd:element name="ReservationID" type="xsd:string"/>
+            </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
